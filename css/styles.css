@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html, body {
+    min-height: 100vh;
+}
+body {
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials {
+    margin: 2rem;
+    gap: 2rem;
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    
+    "daniel daniel jona kira"
+    "jean   patri  patri kira";
+}
+
+.gridContainer {
+    box-shadow: 20px 20px 50px hsla(210, 1%, 43%, 0.336);
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+    transition: transform .2s;
+    
+    
+}
+
+.gridContainer:hover {
+    transform: scale(1.01);
+}
+
+.grid__avatar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.grid__nameContainer {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.grid__verified {
+    font-size: .9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.grid__avatarImg {
+    border-radius: 50%;
+    width: 30px;
+}
+
+.grid__text {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grid__title {
+    font-size: 1.6rem;
+}
+
+.grid__paragraph {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+.alternative--colorText {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.alternative--verified {
+    color: hsla(217, 19%, 35%, 0.5);
+}
+
+.alternative--paragraph {
+    color: hsla(217, 19%, 35%, 0.700);
+}
+.avatar--border {
+    border: 2px solid #A775F1;
+}
+
+.grid--daniel {
+    grid-area: daniel;
+    background-color: var(--Moderate-violet);
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: right 15% top;
+}
+.grid--jona {
+    grid-area: jona;
+    background-color: var(--Very-dark-grayish-blue);
+    
+}
+.grid--jean {
+    grid-area: jean;
+    background-color: white;
+}
+.grid--patrick {
+    grid-area: patri;
+    background-color: var(--Very-dark-blackish-blue);
+}
+.grid--kira {
+    grid-area: kira;
+    background-color: white;
+}
+
+@media (max-width: 850px) {
+    .testimonials {
+        grid-template-areas: 
+    
+            "daniel daniel daniel daniel"
+            "jona jona jona jona"
+            "jean jean jean jean"
+            "patri patri patri patri"
+            "kira kira kira kira";
+    }
+}
